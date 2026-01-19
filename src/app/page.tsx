@@ -147,11 +147,8 @@ function MainInvitation() {
             <div className="mx-auto mb-3" style={{ width: '60px', height: '2px', backgroundColor: 'rgba(212, 175, 55, 0.6)' }} />
 
             {/* Title */}
-            <p className="mb-2 text-uppercase" style={{ fontSize: '0.75rem', letterSpacing: '3px', color: 'rgba(255,255,255,0.6)' }}>
-              Undangan Oleman Begawe
-            </p>
             <h2 className="font-esthetic mb-4" style={{ fontSize: '2.5rem', color: '#d4af37' }}>
-              The Wedding Of
+              Oleman Begawe
             </h2>
 
             {/* Couple Photo with Golden Border */}
