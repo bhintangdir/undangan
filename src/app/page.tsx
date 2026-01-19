@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Image from 'next/image';
 import Countdown from '@/components/Countdown';
@@ -48,7 +48,7 @@ const weddingConfig = {
 
 
 
-export default function Home() {
+function MainInvitation() {
   const searchParams = useSearchParams();
   const [isWelcomeVisible, setIsWelcomeVisible] = useState(true);
   const [isLoading, setIsLoading] = useState(true);
@@ -533,5 +533,23 @@ export default function Home() {
         <div style={{ height: '60px' }} />
       </div>
     </>
+  );
+}
+
+
+export default function Home() {
+  return (
+    <Suspense fallback={
+      <div className="loading-page d-flex flex-column justify-content-center align-items-center bg-white-black">
+        <div className="width-loading d-flex flex-column align-items-center">
+          <div className="spinner-border text-primary mb-3" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </div>
+          <small className="text-theme-auto">Loading...</small>
+        </div>
+      </div>
+    }>
+      <MainInvitation />
+    </Suspense>
   );
 }
