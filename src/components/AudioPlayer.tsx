@@ -4,11 +4,26 @@ import { useRef, useState } from 'react';
 
 interface AudioPlayerProps {
     src: string;
+    shouldPlay?: boolean;
 }
 
-export default function AudioPlayer({ src }: AudioPlayerProps) {
+export default function AudioPlayer({ src, shouldPlay = false }: AudioPlayerProps) {
     const audioRef = useRef<HTMLAudioElement>(null);
     const [isPlaying, setIsPlaying] = useState(false);
+    const hasAttemptedAutoplay = useRef(false);
+
+    // Effect to handle autoplay trigger
+    if (shouldPlay && !isPlaying && !hasAttemptedAutoplay.current && audioRef.current) {
+        audioRef.current.play()
+            .then(() => {
+                setIsPlaying(true);
+                hasAttemptedAutoplay.current = true;
+            })
+            .catch((e) => {
+                console.log("Autoplay blocked:", e);
+                // Don't mark as attempted so we might try again or let user click
+            });
+    }
 
     const togglePlay = () => {
         if (audioRef.current) {
@@ -30,7 +45,7 @@ export default function AudioPlayer({ src }: AudioPlayerProps) {
                 style={{
                     width: '3rem',
                     height: '3rem',
-                    bottom: '1rem',
+                    bottom: '5.5rem',
                     right: '1rem',
                     zIndex: 1050,
                 }}
