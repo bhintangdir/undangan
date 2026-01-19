@@ -41,7 +41,7 @@ const weddingConfig = {
     },
   },
   countdownDate: '2026-01-24 10:00:00',
-  mapsUrl: 'https://google.com/maps?q=-8.766398429870605,116.23773956298828&z=17&hl=en',
+  mapsUrl: 'https://www.google.com/maps/search/?api=1&query=-8.766398429870605,116.23773956298828',
   address: 'Dusun Masjuring, Desa Bonder, Kec. Praya Barat, Kab. Lombok Tengah, Nusa Tenggara Barat 83572 ',
   music: '/assets/music/SampaiJadiDebu-BandaNeira.mp3',
 };
@@ -276,7 +276,7 @@ function MainInvitation() {
                 <h2 className="font-esthetic my-4 text-theme-auto" style={{ fontSize: '2.25rem' }}>
                   {weddingConfig.groomShortName} &amp; {weddingConfig.brideShortName}
                 </h2>
-                <p className="my-2 text-theme-auto" style={{ fontSize: '1.25rem' }}>
+                <p className="my-2 text-theme-auto" style={{ fontSize: '0.9rem' }}>
                   {weddingConfig.events.begawe.name} {weddingConfig.events.begawe.date}
                   <br />
                   {weddingConfig.events.nyongkolan.name} {weddingConfig.events.nyongkolan.date}
