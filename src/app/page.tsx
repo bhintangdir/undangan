@@ -208,16 +208,7 @@ function MainInvitation() {
             </button>
           </div>
 
-          {/* Footer Credit */}
-          <div className="text-center position-absolute w-100" style={{ bottom: '5%', left: 0 }}>
-            <div className="d-flex flex-column">
-              <small style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.7rem' }}>Created by</small>
-              <a href="https://instagram.com/bhintangdir" target="_blank" rel="noopener noreferrer" style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.75rem', textDecoration: 'none' }}>
-                <i className="fa-brands fa-instagram me-1" />
-                @bhintangdir
-              </a>
-            </div>
-          </div>
+
 
 
         </div>
@@ -511,13 +502,7 @@ function MainInvitation() {
 
                 <hr className="my-4" />
 
-                <div className="d-flex flex-column pb-4">
-                  <small className="text-secondary">Created by</small>
-                  <a href="https://instagram.com/bhintangdir" target="_blank" rel="noopener noreferrer" className="text-theme-auto" style={{ textDecoration: 'none' }}>
-                    <i className="fa-brands fa-instagram me-1" />
-                    @bhintangdir
-                  </a>
-                </div>
+
 
                 <small className="d-block pb-3 text-secondary">
                   <i className="fa-solid fa-music me-1" />
