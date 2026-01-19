@@ -148,7 +148,7 @@ function MainInvitation() {
 
             {/* Title */}
             <p className="mb-2 text-uppercase" style={{ fontSize: '0.75rem', letterSpacing: '3px', color: 'rgba(255,255,255,0.6)' }}>
-              Undangan Pernikahan
+              Undangan Oleman Begawe
             </p>
             <h2 className="font-esthetic mb-4" style={{ fontSize: '2.5rem', color: '#d4af37' }}>
               The Wedding Of
@@ -212,10 +212,10 @@ function MainInvitation() {
           <div className="text-center position-absolute w-100" style={{ bottom: '5%', left: 0 }}>
             <div className="d-flex flex-column">
               <small style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.7rem' }}>Created by</small>
-              <small style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.75rem' }}>
+              <a href="https://instagram.com/bhintangdir" target="_blank" rel="noopener noreferrer" style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.75rem', textDecoration: 'none' }}>
                 <i className="fa-brands fa-instagram me-1" />
                 @bhintangdir
-              </small>
+              </a>
             </div>
           </div>
 
@@ -513,10 +513,10 @@ function MainInvitation() {
 
                 <div className="d-flex flex-column pb-4">
                   <small className="text-secondary">Created by</small>
-                  <small className="text-theme-auto">
+                  <a href="https://instagram.com/bhintangdir" target="_blank" rel="noopener noreferrer" className="text-theme-auto" style={{ textDecoration: 'none' }}>
                     <i className="fa-brands fa-instagram me-1" />
                     @bhintangdir
-                  </small>
+                  </a>
                 </div>
 
                 <small className="d-block pb-3 text-secondary">
